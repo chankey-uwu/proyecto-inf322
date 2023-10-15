@@ -15,7 +15,7 @@ export const HomePage = () => {
       <div style={divStyle}><Button style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px'}} variant="contained" size="large">Reservar Quincho</Button></div> 
       <div style={divStyle}><Button style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px'}} variant="contained" size="large">Registrar Visitas</Button></div>
       <div style={divStyle}><Button style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px'}} variant="contained" size="large">Custodia Paquetes</Button></div>
-      <div style={divStyle}><Button style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px'}} variant="contained" size="large">Chat Vecinos</Button></div>
+      <div style={divStyle}><Button style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px'}} variant="contained" size="large" disabled disableRipple>Chat Vecinos</Button></div>
     </div>
   )
 }
