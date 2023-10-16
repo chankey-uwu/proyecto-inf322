@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import HomePage from '../pages/home'
 import InternalPage from '../pages/internal'
+import ReservarQuincho from '../pages/reservar-quincho'
+import RegistrarVisitas from '../pages/registrar-visitas'
+import CustodiaPaquetes from '../pages/custodia-paquetes'
 
 const AppRouter = () => {
   return (
@@ -10,6 +13,9 @@ const AppRouter = () => {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/internal' element={<InternalPage />} />
+        <Route path='/reservar-quincho' element={<ReservarQuincho />} />
+        <Route path='/registrar-visitas' element={<RegistrarVisitas />} />
+        <Route path='/custodia-paquetes' element={<CustodiaPaquetes />} />
       </Routes>
     </BrowserRouter>
   )
