@@ -2,7 +2,7 @@
 ## Integrantes
 - Carlos Kuhn **[chankey-uwu]**, 202073574-3
 - José Pinto **[Pepebeats-flp]**, rol
-- Nicolás Cancino **[ElekisDe]**, rol
+- Nicolás Cancino **[ElekisDe]**, 202004680-8
 
 ## Metas de usuario
 
