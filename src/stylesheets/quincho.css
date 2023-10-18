@@ -1,0 +1,13 @@
+#block_container
+{
+    text-align:center;
+}
+#custom-static-datepicker .MuiPickersDay-daySelected {
+    background-color: #ffffff !important; /* Cambia el color de fondo de la selección aquí */
+    color: #000000 !important; /* Cambia el color del texto seleccionado aquí */
+  }
+  
+#custom-static-datepicker .MuiPickersDay-daySelected:hover {
+background-color: #ff0000 !important; /* Cambia el color de fondo al pasar el cursor sobre la selección aquí */
+}
+  
