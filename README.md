@@ -1,33 +1,33 @@
-#proyecto-inf322
-# frontend-sample-app
-Basic Frontend Development Environment to start an app with Webpack
+# Proyecto Comunidad-Edificio INF322
+## Metas de usuario
 
-This repo includes `Webpack` to start an environment to build frontend views using `React`.
+Nuestro prototipo inicial contaba con dos secciones para cada tipo de usuario, la de conserje y residente del edificio, en la cual cada una tenía tres metas de usuario. 
+Para poder realizar un testeo más simple realizamos nuestro MVP basándonos sólo en el usuario residente, y las metas de usuario son las siguientes:
+- Reservar quincho
+- Registrar visitas
+- Revisar custodia de paquetes
 
-### Requirements
+## Link video
+
+[http://example.net/](http://example.net/)
+
+## Instrucciones para el correcto funcionamiento de la aplicación
+### Requisitos
 - Node >= 16.13.1
 - npm >= 8.1.2
 
-### Quick start
+### Comandos
 
-Install dependences
+Instalar dependencias
 
 ```
 npm install
 ```
 
-Launch environment
+Entorno de ejecución
 
 ```
 npm run dev
 ```
 
-Now you can open http://localhost:5050
-
-### Packages included
-- [Webpack](https://webpack.js.org/)
-- [React Router](https://reactrouter.com/en/main)
-- [Material UI](https://mui.com/material-ui/getting-started/usage/)
-
-### About stylesheets
-- Sample stylesheets were written using the [BEM](https://getbem.com/) structure
+Abrir http://localhost:5050
