@@ -13,3 +13,8 @@
   .table th {
     background-color: #f2f2f2; /* Estilo para los encabezados */
   }
+
+  .swal-text {
+    text-align: center !important;
+  }
+  
