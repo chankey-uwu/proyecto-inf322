@@ -1,4 +1,9 @@
-# Proyecto Comunidad-Edificio INF322
+# Proyecto Comunidad-Edificio INF322 paralelo 200
+## Integrantes
+- Carlos Kuhn **[chankey-uwu]**, 202073574-3
+- José Pinto **[Pepebeats-flp]**, rol
+- Nicolás Cancino **[ElekisDe]**, rol
+
 ## Metas de usuario
 
 Nuestro prototipo inicial contaba con dos secciones para cada tipo de usuario, la de conserje y residente del edificio, en la cual cada una tenía tres metas de usuario. 
