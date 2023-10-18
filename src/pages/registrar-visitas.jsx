@@ -1,10 +1,28 @@
 import React from 'react';
-
+import { Button } from '@mui/material';
 
 const RegistrarVisitas = () => {
+  const divStyle = {
+    maxWidth: '100%',
+    maxHeight: '75px',
+    minWidth: '100%',
+    minHeight: '75px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+
+  };
+  const buttonStyle = {
+    maxWidth: '100%',
+    maxHeight: '50px',
+    minWidth: '50%',
+    minHeight: '50px',
+    backgroundColor: 'black',
+  };
   return (
     <div className='page' style={{backgroundColor: 'white'}}>
-      <h1 style={{textAlign: 'center', marginTop: '15px', marginBottom: '45px' }}>Registrar Visitas</h1>
+      <h1 style={{textAlign: 'center', marginTop: '15px', marginBottom: '65px' }}>Registrar Visitas</h1>
 
       <div className='container' style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
         <form style={{ width: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
@@ -27,10 +45,11 @@ const RegistrarVisitas = () => {
             <label htmlFor='motivo'>¿Estacionamiento?</label>
             <input type='checkbox' className='form-control' id='estacionamiento' style={{marginTop: '5px' }} />
           </div>
-
-          <button type='submit' className='btn btn-primary' style={{width: '50%', marginTop: '15px' }}>
-            Registrar
-          </button>
+          <div style={divStyle}>
+            <Button variant="contained" size="large" style={buttonStyle}>
+              Registrar Visita
+            </Button>
+          </div>
         </form>        
       </div>
     </div>
