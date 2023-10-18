@@ -1,8 +1,28 @@
 import React from 'react';
-import '../stylesheets/tabla.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import '../stylesheets/custodia.css';
+import swal from 'sweetalert';
 
 const CustodiaPaquetes = () => {
+  const mostrarAlerta=()=>{
+    swal({
+      title: "Advertencia",
+      text: "Recuerda que solo debes confirmar tu recepción cuando ya tengas los paquetes en tus manos",
+      icon: "warning",
+      buttons: ["Cancelar", "Confirmar"]
+    }).then((confirmar) => {
+      if (confirmar) {
+          swal({
+            text: "Recepción exitosa",
+            icon: "success",
+            timer: "1700",  
+            buttons: false
+          }).then(() => {
+            window.location.href = "/"
+          });
+      }
+    });
+  };
+
   return (
   <div className='page' style={{backgroundColor: 'white'}}>
       <h1 style={{textAlign: 'center', marginTop: '15px', marginBottom: '45px' }}>Custodia Paquetes</h1>
@@ -30,13 +50,13 @@ const CustodiaPaquetes = () => {
         </tr>
       </tbody>
     </table>
-    <div style={{maxWidth: '25%',maxHeight: '75px',minWidth: '25%',minHeight: '75px'}}>
-      <Link to="/">  
-        <button variant="contained" size="large" style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px', backgroundColor: 'black', marginTop: '40px', color: 'white', fontSize: '18px'}}>
+
+    <div style={{maxWidth: '25%',maxHeight: '75px',minWidth: '25%',minHeight: '75px'}}> 
+        <button onClick={()=>mostrarAlerta()} variant="contained" size="large" style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px', backgroundColor: 'black', marginTop: '40px', color: 'white', fontSize: '18px'}}>
           Confirmar Recepción
         </button>
-      </Link>
     </div>
+
     </div>
   </div>
   );
