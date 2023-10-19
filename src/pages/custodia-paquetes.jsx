@@ -2,6 +2,8 @@ import React from 'react';
 import '../stylesheets/custodia.css';
 import swal from 'sweetalert';
 import { Button } from '@mui/material';
+import Inventory2Icon from '@mui/icons-material/Inventory2';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 const CustodiaPaquetes = (setValue) => {
   
@@ -25,13 +27,32 @@ const CustodiaPaquetes = (setValue) => {
       }
     });
   };
-
+  const buttonStyle = {
+    maxWidth: '100%',
+    maxHeight: '50px',
+    minWidth: '100%',
+    minHeight: '50px',
+    backgroundColor: 'black',
+    fontSize: '13px',
+    padding: '3px',
+  };
   return (
-  <div className='page' style={{backgroundColor: 'white'}}>
-      <h1 style={{textAlign: 'center', marginTop: '15px', marginBottom: '45px' }}>Custodia Paquetes</h1>
-
+    <div className='page' style={{ backgroundColor: 'white' }}>
+    <div>
+      <a href="/">
+        <ArrowBackIosIcon style={{ fontSize: 25, marginTop: 5, marginLeft: 5 , color: 'black'}} />
+      </a>
+    </div>
+    <div style={{ display: 'flex', justifyContent: 'center'}}>
+      <h1 style={{fontSize: '22px', display: 'flex', alignItems: 'center', marginTop: '20px' }}>
+        <div style={{maxWidth: '80%'}}>Custodia Paquetes</div>
+        <div>
+          <Inventory2Icon style={{ fontSize: 40, marginLeft: 10, marginTop: 10 }} />
+        </div>
+      </h1>
+    </div>
+  <div className='page' style={{borderRadius:'10px' }}> 
       <div className='container' style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
-
       <table className='table' style={{maxWidth: '80%',maxHeight: '75px',minWidth: '80%',minHeight: '75px'}}>
       <thead>
         <tr>
@@ -54,14 +75,14 @@ const CustodiaPaquetes = (setValue) => {
       </tbody>
     </table>
 
-    <div style={{maxWidth: '40%',maxHeight: '75px',minWidth: '40%',minHeight: '75px'}}> 
-        <Button onClick={()=>mostrarAlerta()} variant="contained" size="large" style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px', backgroundColor: 'black', marginTop: '40px'}}>
+    <div style={{maxWidth: '40%',maxHeight: '75px',minWidth: '40%',minHeight: '75px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', margin: '20px'}}>
+        <Button onClick={()=>mostrarAlerta()} variant="contained" size="large" style={buttonStyle}>
           Confirmar Recepción
         </Button>
     </div>
-
     </div>
   </div>
+</div>
   );
 };
 

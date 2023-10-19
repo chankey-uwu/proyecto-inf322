@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { Button } from '@mui/material';
-import NavBar from '../components/nav_bar'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import ReservarQuincho from './reservar-quincho';
 import CustodiaPaquetes from './custodia-paquetes';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export const HomePage = () => {
   const handleCustodiaPaquetesClick = () => {
@@ -30,35 +30,45 @@ export const HomePage = () => {
     minWidth: '100%',
     minHeight: '50px',
     backgroundColor: 'black',
+    fontSize: '13px',
+    padding: '3px',
   };
   return (
-    <div className='page'>
-      <h1 className='page__title'>Frontend Sample App</h1>
-      <NavBar />
-      <h2>Página de Inicio</h2>
-      <Link to="/reservar-quincho">
+    <div className='page' style={{backgroundColor: 'white'}}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+        <a href="/">
+          <MenuIcon style={{ fontSize: 30, marginTop: 5, marginLeft: 5 , color: 'black'}}/>
+        </a>
+        <img src="https://i.pinimg.com/originals/30/8d/79/308d795c3cac0f8f16610f53df4e1005.jpg" alt="perfil"
+          style={{ height: '50px', width:'50px', borderRadius: '50%'}} />
+      </div>
+
+      <h1 className='page__title' style={{fontSize: '50px', textAlign: 'center', marginTop: '20px' }}>Bienvenidx</h1>
+      <div className='page' style={{borderRadius:'10px' }}>
+        <Link to="/reservar-quincho">
+          <div style={divStyle}>
+            <Button variant="contained" size="large" style={buttonStyle}>
+              Reservar Quincho
+            </Button>
+          </div>
+        </Link>
+        <Link to="/registrar-visitas">
+          <div style={divStyle}>
+            <Button variant="contained" size="large" style={buttonStyle}>
+              Registrar Visitas
+            </Button>
+          </div>
+        </Link>
+          <div style={divStyle}>
+            <Button variant="contained" size="large" onClick={handleCustodiaPaquetesClick} style={buttonStyle}>
+              Custodia Paquetes
+            </Button>
+          </div>
         <div style={divStyle}>
-          <Button variant="contained" size="large" style={buttonStyle}>
-            Reservar Quincho
+          <Button variant="contained" size="large" style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px'}} disabled disableRipple>
+            Chat Vecinos
           </Button>
         </div>
-      </Link>
-      <Link to="/registrar-visitas">
-        <div style={divStyle}>
-          <Button variant="contained" size="large" style={buttonStyle}>
-            Registrar Visitas
-          </Button>
-        </div>
-      </Link>
-        <div style={divStyle}>
-          <Button variant="contained" size="large" onClick={handleCustodiaPaquetesClick} style={buttonStyle}>
-            Custodia Paquetes
-          </Button>
-        </div>
-      <div style={divStyle}>
-        <Button variant="contained" size="large" style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px'}} disabled disableRipple>
-          Chat Vecinos
-        </Button>
       </div>
     </div>
   )
