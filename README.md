@@ -1,7 +1,7 @@
 # Proyecto Comunidad-Edificio INF322 paralelo 200
 ## Integrantes
 - Carlos Kuhn **[chankey-uwu]**, 202073574-3
-- José Pinto **[Pepebeats-flp]**, rol
+- José Pinto **[Pepebeats-flp]**, 202073559-K
 - Nicolás Cancino **[ElekisDe]**, 202004680-8
 
 ## Metas de usuario
@@ -12,9 +12,7 @@ Para poder realizar un testeo más simple realizamos nuestro MVP basándonos só
 - Registrar visitas
 - Revisar custodia de paquetes
 
-## Link video
-
-[http://example.net/](http://example.net/)
+## [Link video](https://drive.google.com/file/d/13pDkhKasv-WL1sHEv2y4nRBfxovQYo2w/view?usp=share_link)
 
 ## Instrucciones para el correcto funcionamiento de la aplicación
 ### Requisitos
