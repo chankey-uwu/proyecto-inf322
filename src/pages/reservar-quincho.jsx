@@ -19,6 +19,16 @@ const ReservarQuincho = () => {
     '2023-11-02',
   ]);
 
+  const mostrarConfirmacion = () =>
+  swal({
+    text: 'Quincho reservado exitosamente',
+    icon: 'success',
+    buttons: 'Aceptar',
+  }).then(() => {
+    window.location.href = '/';
+    setValue(true);
+  });
+
   const handleDateChange = (newDate) => {
     setSelectedDate(newDate);
     setIsHidden(false);
@@ -33,6 +43,7 @@ const ReservarQuincho = () => {
       setFechasReservadas([...fechasReservadas, formattedDate]);
       console.log('Nuevas fechas reservadas:', fechasReservadas);
       console.log('Reserva confirmada para el día:', formattedDate);
+      mostrarConfirmacion();
     }
   };
 
@@ -66,7 +77,8 @@ const ReservarQuincho = () => {
           </div>
         </h1>
       </div>
-    <div style={{borderRadius:'10px', backgroundColor: 'white', padding: '20px', margin: '20px', justifyContent: 'center', alignItems: 'center' }}>
+    <div style={{borderRadius:'10px', backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+      <h4 style={{margin: '20px'}}>Seleccione la fecha en la que desea reservar el quincho:</h4>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
       <StaticDatePicker
@@ -88,17 +100,16 @@ const ReservarQuincho = () => {
           width: '100%',
           display: isHidden ? 'none' : 'block',
           borderRadius: '10px',
-          padding: '10px',
+          padding: '20px',
           textAlign: 'center',
+          marginTop: '20px',
         }}
       > 
         ¿Desea reservar el quincho para el día: {selectedDate ? dayjs(selectedDate).format('DD/MM/YYYY') : ''}?
         <div style={{ marginTop: '10px' }}>
-          <Link to="/">  
-            <Button variant="contained" size="large" style={buttonStyle} onClick={handleAceptar}>
-              Aceptar
-            </Button>
-          </Link>
+          <Button variant="contained" size="large" style={buttonStyle} onClick={handleAceptar}>
+            Aceptar
+          </Button>
           <Button variant="contained" size="large" style={buttonStyle} onClick={handleCancelar}>
             Cancelar
           </Button>
