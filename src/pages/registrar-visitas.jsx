@@ -21,6 +21,8 @@ const RegistrarVisitas = () => {
     maxWidth: '100%',
     maxHeight: '50px',
     minWidth: '50%',
+    fontSize: '13px',
+    fontFamily: ['Open Sans', 'sans-serif'],
     minHeight: '50px',
     backgroundColor: 'black',
   };

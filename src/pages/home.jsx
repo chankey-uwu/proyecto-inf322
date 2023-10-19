@@ -31,14 +31,13 @@ export const HomePage = () => {
     minHeight: '50px',
     backgroundColor: 'black',
     fontSize: '13px',
+    fontFamily: ['Open Sans', 'sans-serif'],
     padding: '3px',
   };
   return (
     <div className='page' style={{backgroundColor: 'white'}}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-        <a href="/">
-          <MenuIcon style={{ fontSize: 30, marginTop: 5, marginLeft: 5 , color: 'black'}}/>
-        </a>
+        <MenuIcon style={{ fontSize: 30, marginTop: 5, marginLeft: 5 , color: '#d8d4d4'}}/>
         <img src="https://i.pinimg.com/originals/30/8d/79/308d795c3cac0f8f16610f53df4e1005.jpg" alt="perfil"
           style={{ height: '50px', width:'50px', borderRadius: '50%'}} />
       </div>
@@ -65,7 +64,7 @@ export const HomePage = () => {
             </Button>
           </div>
         <div style={divStyle}>
-          <Button variant="contained" size="large" style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px'}} disabled disableRipple>
+          <Button variant="contained" size="large" style={{fontSize: '13px',fontFamily: ['Open Sans', 'sans-serif'],maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px'}} disabled disableRipple>
             Chat Vecinos
           </Button>
         </div>

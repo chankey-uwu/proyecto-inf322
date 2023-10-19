@@ -30,6 +30,7 @@ const CustodiaPaquetes = (setValue) => {
   const buttonStyle = {
     maxWidth: '100%',
     maxHeight: '50px',
+    fontFamily: ['Open Sans', 'sans-serif'],
     minWidth: '100%',
     minHeight: '50px',
     backgroundColor: 'black',
@@ -75,7 +76,7 @@ const CustodiaPaquetes = (setValue) => {
       </tbody>
     </table>
 
-    <div style={{maxWidth: '40%',maxHeight: '75px',minWidth: '40%',minHeight: '75px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', margin: '20px'}}>
+    <div style={{maxWidth: '100%',maxHeight: '75px',minWidth: '100%',minHeight: '75px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', margin: '20px'}}>
         <Button onClick={()=>mostrarAlerta()} variant="contained" size="large" style={buttonStyle}>
           Confirmar Recepción
         </Button>
