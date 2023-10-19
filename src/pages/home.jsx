@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button } from '@mui/material';
 import NavBar from '../components/nav_bar'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import ReservarQuincho from './reservar-quincho';
+import CustodiaPaquetes from './custodia-paquetes';
 
 export const HomePage = () => {
+  const handleCustodiaPaquetesClick = () => {
+    if (CustodiaPaquetes.setValue) {
+      swal({
+        title: "No te han llegado paquetes aún.",
+        icon: "info",
+        button: "Aceptar"
+      });
+    } else {
+      window.location.href = '/custodia-paquetes';
+    }
+  };
+
   const divStyle = {
     maxWidth: '100%',
     maxHeight: '75px',
@@ -37,13 +50,11 @@ export const HomePage = () => {
           </Button>
         </div>
       </Link>
-      <Link to="/custodia-paquetes">
         <div style={divStyle}>
-          <Button variant="contained" size="large" style={buttonStyle}>
+          <Button variant="contained" size="large" onClick={handleCustodiaPaquetesClick} style={buttonStyle}>
             Custodia Paquetes
           </Button>
         </div>
-      </Link>
       <div style={divStyle}>
         <Button variant="contained" size="large" style={{maxWidth: '100%', maxHeight: '50px', minWidth: '100%', minHeight: '50px'}} disabled disableRipple>
           Chat Vecinos
