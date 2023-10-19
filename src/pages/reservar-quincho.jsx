@@ -6,6 +6,8 @@ import dayjs from 'dayjs';
 import '../stylesheets/quincho.css';
 import Button from '@mui/material/Button';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import GroupAddIcon from '@mui/icons-material/GroupAdd';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Link } from 'react-router-dom';
 
 const ReservarQuincho = () => {
@@ -44,20 +46,28 @@ const ReservarQuincho = () => {
     maxWidth: '40%',
     maxHeight: '35px',
     minWidth: '40%',
-    minHeight: '35px',
+    minHeight: '25px',
     backgroundColor: 'black',
+    fontSize: '10px',
   };
 
   return (
-    <div className='page'>
-      <h1 style={{fontSize: '22px', display: 'flex', alignItems: 'center', margin: 20}}>
-        <div style={{maxWidth: '80%'}}>Reservar Quincho</div>
-        <div>
-          <CalendarMonthIcon style={{ fontSize: 40, marginLeft: 10, marginTop: 10 }} />
-        </div>
-      </h1>
-
+      <div style={{ backgroundColor: 'white', padding: '20px', margin: '20px' }}>
+      <div>
+        <a href="/">
+          <ArrowBackIosIcon style={{ fontSize: 25, marginTop: 5, marginLeft: 5 , color: 'black'}} />
+        </a>
+      </div>
       <div style={{ display: 'flex', justifyContent: 'center'}}>
+        <h1 style={{fontSize: '22px', display: 'flex', alignItems: 'center', marginTop: '20px' }}>
+          <div style={{maxWidth: '80%'}}>Reservar Quincho</div>
+          <div>
+            <CalendarMonthIcon style={{ fontSize: 40, marginLeft: 10, marginTop: 10 }} />
+          </div>
+        </h1>
+      </div>
+    <div style={{borderRadius:'10px', backgroundColor: 'white', padding: '20px', margin: '20px', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
       <StaticDatePicker
         displayStaticWrapperAs="desktop"
@@ -74,11 +84,12 @@ const ReservarQuincho = () => {
       </div>
       <div
         style={{ 
-          padding: '10px 4px',
-          margin: '20px 0',
-          backgroundColor: 'white',
+          backgroundColor: '#f0f0f0',
           width: '100%',
-          display: isHidden ? 'none' : 'block'
+          display: isHidden ? 'none' : 'block',
+          borderRadius: '10px',
+          padding: '10px',
+          textAlign: 'center',
         }}
       > 
         ¿Desea reservar el quincho para el día: {selectedDate ? dayjs(selectedDate).format('DD/MM/YYYY') : ''}?
@@ -93,6 +104,7 @@ const ReservarQuincho = () => {
           </Button>
         </div>
       </div>
+    </div>
     </div>
   );
 };
