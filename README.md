@@ -1,7 +1,7 @@
 # Proyecto Comunidad-Edificio INF322 paralelo 200
 ## Integrantes
 - Carlos Kuhn **[chankey-uwu]**, 202073574-3
-- José Pinto **[Pepebeats-flp]**, rol
+- José Pinto **[Pepebeats-flp]**, 202073559-K
 - Nicolás Cancino **[ElekisDe]**, 202004680-8
 
 ## Metas de usuario
