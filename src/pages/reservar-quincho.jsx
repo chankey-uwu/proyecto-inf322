@@ -102,7 +102,7 @@ const ReservarQuincho = () => {
       <div
         style={{ 
           backgroundColor: '#f0f0f0',
-          width: '100%',
+          width: '85%',
           display: isHidden ? 'none' : 'block',
           borderRadius: '10px',
           padding: '20px',
