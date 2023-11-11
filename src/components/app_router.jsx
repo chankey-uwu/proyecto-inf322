@@ -6,6 +6,7 @@ import InternalPage from '../pages/internal'
 import ReservarQuincho from '../pages/reservar-quincho'
 import RegistrarVisitas from '../pages/registrar-visitas'
 import CustodiaPaquetes from '../pages/custodia-paquetes'
+import HistorialVisitas from '../pages/historial-visitas'
 
 const AppRouter = () => {
   return (
@@ -16,6 +17,7 @@ const AppRouter = () => {
         <Route path='/reservar-quincho' element={<ReservarQuincho />} />
         <Route path='/registrar-visitas' element={<RegistrarVisitas />} />
         <Route path='/custodia-paquetes' element={<CustodiaPaquetes />} />
+        <Route path='/historial-visitas' element={<HistorialVisitas />} />
       </Routes>
     </BrowserRouter>
   )
