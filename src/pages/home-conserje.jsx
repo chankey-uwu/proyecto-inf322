@@ -37,7 +37,7 @@ export const HomeConserje = () => {
     <div className='page' style={{backgroundColor: 'white'}}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
         <MenuIcon style={{ fontSize: 30, marginTop: 5, marginLeft: 5 , color: '#d8d4d4'}}/>
-        <img src="https://i.pinimg.com/originals/30/8d/79/308d795c3cac0f8f16610f53df4e1005.jpg" alt="perfil"
+        <img src="https://media.0221.com.ar/adjuntos/357/migration/0221/032019/1553553111207.jpg" alt="perfil"
           style={{ height: '50px', width:'50px', borderRadius: '50%'}} />
       </div>
 
