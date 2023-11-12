@@ -44,7 +44,7 @@ export const HomePage = () => {
 
       <h1 className='page__title' style={{fontSize: '50px', textAlign: 'center', marginTop: '20px' }}>Bienvenidx</h1>
       <div className='page' style={{borderRadius:'10px' }}>
-        <Link to="/calendario-quincho">
+        <Link to="/reservar-quincho">
           <div style={divStyle}>
             <Button variant="contained" size="large" style={buttonStyle}>
               Reservar Quincho
