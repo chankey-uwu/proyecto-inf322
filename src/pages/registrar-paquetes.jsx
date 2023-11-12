@@ -89,7 +89,7 @@ const RegistrarPaquetes = () => {
           </div>
           <div style={divStyle}>
             <Button onClick={()=>mostrarConfirmacion()} variant="contained" size="large" style={buttonStyle}>
-              Registrar Paquete
+              Registrar
             </Button>
           </div>
         </form>        
