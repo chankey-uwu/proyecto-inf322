@@ -10,7 +10,7 @@ const HistorialVisitas = (setValue) => {
   return (
     <div className='page' style={{ backgroundColor: 'white' }}>
     <div>
-      <a href="/">
+      <a href="/home-conserje">
         <ArrowBackIosIcon style={{ fontSize: 25, marginTop: 5, marginLeft: 5 , color: 'black'}} />
       </a>
     </div>

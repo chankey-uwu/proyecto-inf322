@@ -9,6 +9,7 @@ import RegistrarPaquetes from '../pages/registrar-paquetes'
 import CustodiaPaquetes from '../pages/custodia-paquetes'
 import HistorialVisitas from '../pages/historial-visitas'
 import CalendarioQuincho from '../pages/calendario-quincho'
+import HomeConserje from '../pages/home-conserje'
 
 const AppRouter = () => {
   return (
@@ -16,6 +17,7 @@ const AppRouter = () => {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/internal' element={<InternalPage />} />
+        <Route path='/home-conserje' element={<HomeConserje />} />
         <Route path='/reservar-quincho' element={<ReservarQuincho />} />
         <Route path='/registrar-visitas' element={<RegistrarVisitas />} />
         <Route path='/registrar-paquetes' element={<RegistrarPaquetes/>} />

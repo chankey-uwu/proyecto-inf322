@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react'
 import { Button } from '@mui/material';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import ReservarQuincho from './reservar-quincho';
 import CustodiaPaquetes from './custodia-paquetes';
 import MenuIcon from '@mui/icons-material/Menu';
 
-export const HomePage = () => {
+export const HomeConserje = () => {
   const handleCustodiaPaquetesClick = () => {
     if (CustodiaPaquetes.setValue) {
       swal({
@@ -14,7 +13,7 @@ export const HomePage = () => {
         button: "Aceptar"
       });
     } else {
-      window.location.href = '/custodia-paquetes';
+      window.location.href = '/registrar-paquetes';
     }
   };
 
@@ -42,25 +41,25 @@ export const HomePage = () => {
           style={{ height: '50px', width:'50px', borderRadius: '50%'}} />
       </div>
 
-      <h1 className='page__title' style={{fontSize: '50px', textAlign: 'center', marginTop: '20px' }}>Bienvenidx</h1>
+      <h1 className='page__title' style={{fontSize: '50px', textAlign: 'center', marginTop: '20px' }}>Bienvenido Conserje</h1>
       <div className='page' style={{borderRadius:'10px' }}>
-        <Link to="/reservar-quincho">
+        <Link to="/calendario-quincho">
           <div style={divStyle}>
             <Button variant="contained" size="large" style={buttonStyle}>
-              Reservar Quincho
+              Calendario del Quincho
             </Button>
           </div>
         </Link>
-        <Link to="/registrar-visitas">
+        <Link to="/historial-visitas">
           <div style={divStyle}>
             <Button variant="contained" size="large" style={buttonStyle}>
-              Registrar Visitas
+              Historial de Visitas
             </Button>
           </div>
         </Link>
           <div style={divStyle}>
             <Button variant="contained" size="large" onClick={handleCustodiaPaquetesClick} style={buttonStyle}>
-              Custodia Paquetes
+              Registrar Paquetes
             </Button>
           </div>
         <div style={divStyle}>
@@ -73,4 +72,4 @@ export const HomePage = () => {
   )
 }
 
-export default HomePage
+export default HomeConserje
